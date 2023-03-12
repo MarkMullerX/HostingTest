@@ -1,6 +1,7 @@
 from pyrogram import Client
+import os
 
-print("test")
+print("it's 2 version")
 
 # Create a new Pyrogram client
 api_id = int(os.environ.get("API_ID"))

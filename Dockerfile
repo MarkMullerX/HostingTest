@@ -15,6 +15,9 @@ COPY . /app
 # WORKDIR $APP_HOME
 # COPY . ./
 
+# Install Git
+RUN apt-get update && apt-get install -y git
+
 # Install the required packages
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -23,4 +26,4 @@ ENV API_ID=21210333
 ENV API_HASH='13898900214f0a359b4f3bdad73d333f'
 
 # Run the command to start the Pyrogram bot
-CMD ["python", "main.py"]
+# CMD ["python", "main.py"]
