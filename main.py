@@ -10,8 +10,9 @@ bot = Client("my_bot", api_id=api_id, api_hash=api_hash)
 
 # Define a handler for receiving messages
 @bot.on_message()
-def handle_message(client, message):
-    message.reply_text("Hello, World!")
+async def handle_message(client, message):
+    # await bot.send_message(message.from_user.username)
+    message.reply_text("Hello, " + message.from_user.username)
 
 # Start the Pyrogram client
 bot.run()
